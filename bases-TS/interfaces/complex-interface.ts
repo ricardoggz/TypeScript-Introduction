@@ -23,4 +23,36 @@
     zip : string,
     city : string,
    };
+
+   /*
+   *Extendiendo una interfaz como si fuera una clase:
+   */
+  {
+    interface User{
+        name : string,
+        lastname : string,
+        age : number,
+    };
+
+    /*
+    *Utilizamos la palabra extends para heredar todas
+    *las propiedades de la clase User
+    */
+   interface UserComplete extends User{
+    id ?: number,
+    zip ?: string,
+    city ?: string,
+   };
+
+   const user : UserComplete ={
+    name : "Ricardo José",
+    lastname : "Guevara",
+    age : 21,
+    id : 54190,
+    zip : "GuGR",
+    city : "State of Mexico",
+   };
+
+   console.log(user);
+  }
 }
